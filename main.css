@@ -1,34 +1,39 @@
 body {
+    z-index: -1;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
 }
 
 .header {
-    position: fixed; 
+  position: fixed; 
+  z-index: 2;
+  width: 100%; 
+  background-color: white; 
 }
 
-header ul {
+.header ul {
     text-align: right;
 }
 
-header ul li {
+.header ul li {
     display: inline-block;
     list-style-type: none;
     margin: 0 15px 0 0;
 }
 
-header ul li a {
+.header ul li a {
     text-decoration: none;
     color: black
 }
 
 .topbar {
+    position: fixed; 
     z-index: 1; 
     background-color: #F4AB2E;
     width: 100%; 
     height: 55px;
+    top: 50px; 
     text-align: right;
-    position: fixed; 
 }
 
 .topbar ul li {
@@ -76,22 +81,25 @@ header ul li a {
 }
 
 #logo {
-    z-index: 3; 
-    position: relative;
+    z-index: 4; 
+    position: fixed;
     width: 300px; 
     height: 150px; 
-    border-radius: 50px; 
-    bottom: 30px; 
-    left: 15px; 
+    border-radius: 50px;
+    top: 30px; 
+    left: 10px; 
+  
+
 }
 
 .navbar {
-    overflow: hidden; 
+    position: fixed; 
     background-color: #333;
-    z-index: 0; 
-    margin-top: -100px; 
+    z-index: 3; 
     padding-left: 325px; 
+    top: 105px; 
     width: 100%; 
+    overflow: visible; 
   }
   
   .navbar a {
@@ -149,6 +157,82 @@ header ul li a {
     display: block;
   }
 
+#main { 
+  overflow: hidden; 
+  padding: 1.5em 0 2.0em 1.5em; 
+  display: inline-block;
+  margin-top: 150px; 
+  background-color: lightgrey; 
+  width: 100%;
+  height: 100%; 
+  }
 
+.panel {
+  float: left; 
+  background-color: white; 
+  position: relative;
+  width: 225px;
+  margin: 2em 0.5em 1.0em 0.5em;
+  padding: 1.0em;  
+  border-radius: 30px;
+  text-align: center; 
+}
 
+.checked {
+  color:orange;
+}
+
+.game {
+  height: 200px; 
+  width: 200px; 
+}
+
+h3 {
+  line-height: 0.8em;
+}
   
+.bottom {
+  float: left; 
+  background-color: white; 
+  position: relative;
+  width: 1080px;
+  height: 300px; 
+  margin: 10px 0 0 280px; 
+  border-radius: 30px;
+  text-align: center; 
+}
+
+.bottom a>img {
+  margin-top: -15px; 
+  margin-left: 20px; 
+  margin-right: 20px; 
+} 
+
+.legal {
+  float: left; 
+  background-color: white; 
+  position: relative; 
+  width: 245px; 
+  height: 300px;
+  Margin: 450px 0 0 10px; 
+  padding: 0 0 0 10px;
+  border-radius: 30px; 
+}
+
+.sale {
+  background-color: #F4AB2E; 
+  position: relative; 
+  width: 245px; 
+  height: 300px;
+  margin-top: 445px; 
+  margin-left: 1375px; 
+  padding: 0 0 0 10px;
+  border-radius: 30px; 
+}
+
+#legallogo {
+  width: 70%;
+  align-self: center; 
+  border-radius: 50px;
+
+}
